@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+export DH_GOPKG := github.com/mistifyio/go-zfs
+export DH_GOLANG_INSTALL_ALL := 1
+
+override_dh_auto_test:
+	# upstream tests require ZFS (surprise!)
+	# since this is non-trivial to get set up and working nicely, we'll let this stay conditional on whether the "zfs" tool is installed
+	! command -v zfs > /dev/null || \
+		dh_auto_test -O--buildsystem=golang
+
+%:
+	dh $@ --buildsystem=golang --with=golang

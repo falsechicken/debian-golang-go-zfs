@@ -1,0 +1,4 @@
+*.debhelper.log
+*.substvars
+golang-go-zfs-dev/
+files
