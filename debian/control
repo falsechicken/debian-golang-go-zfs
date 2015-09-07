@@ -1,17 +1,18 @@
 Source: golang-go-zfs
 Section: devel
 Priority: extra
-Maintainer: Tianon Gravi <admwiggin@gmail.com>
-Uploaders: Docker Packaging Team <docker-maint@lists.alioth.debian.org>
+Maintainer: pkg-go <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Tianon Gravi <tianon@debian.org>
 Build-Depends: debhelper (>= 9), dh-golang, golang-go
 Standards-Version: 3.9.6
 Homepage: https://github.com/mistifyio/go-zfs
 Vcs-Git: git://anonscm.debian.org/pkg-go/packages/golang-go-zfs.git
 Vcs-Browser: https://anonscm.debian.org/cgit/pkg-go/packages/golang-go-zfs.git
+XS-Go-Import-Path: github.com/mistifyio/go-zfs
 
 Package: golang-go-zfs-dev
 Architecture: all
-Depends: ${misc:Depends}
+Depends: golang-go, ${misc:Depends}
 Recommends: zfs-fuse | zfsutils
 Description: Go library for ZFS manipulation
  Simple wrappers for ZFS command line tools, used for manipulating ZFS
