@@ -1,8 +1,8 @@
-golang-go-zfs (2.1.1-1) UNRELEASED; urgency=medium
+golang-go-zfs (2.1.1-1) unstable; urgency=medium
 
   * Update to 2.1.1 upstream release.
 
- -- Tianon Gravi <tianon@debian.org>  Thu, 04 Jun 2015 06:15:03 +0000
+ -- Tianon Gravi <tianon@debian.org>  Mon, 07 Sep 2015 09:07:26 -0700
 
 golang-go-zfs (2.1.0-1) unstable; urgency=medium
 
